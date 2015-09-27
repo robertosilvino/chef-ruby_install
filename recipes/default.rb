@@ -31,9 +31,9 @@ when 'debian'
   when "lucid"
       packages |= %w{ libssl0.9.8 }
   when "precise"
-      packages |= %w{ libssl1.0.0 libssl1.0.0-dbg }
+      packages |= %w{ libssl1.0.0 } # libssl1.0.0-dbg
   else
-    packages = %w{ libssl1.0.0 libssl1.0.0-dbg }
+    packages = %w{ libssl1.0.0 } # libssl1.0.0-dbg
   end
   packages.each do |pkg|
       package pkg do
